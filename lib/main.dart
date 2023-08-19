@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:v2en/mainpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -91,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     labelText: 'Password',
-                    labelStyle: TextStyle(color: Colors.white),
+                    //  labelStyle: TextStyle(color: Colors.white),
                   ),
                   obscureText: true,
                 ),
@@ -103,10 +104,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: const ButtonStyle(
                       fixedSize: MaterialStatePropertyAll(Size(20, 20))),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => Page2()),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MainPage()),
+                    );
                   },
                   child: const Icon(CupertinoIcons.check_mark))
             ],
